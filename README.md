@@ -6,7 +6,7 @@ Search any recipe you want, with ingredients and instructions.
 Save recipes using a like feature.
 
 ### Technologies
-Webpack
-BabelJS
-Axios
-Fractional
+-Webpack
+-BabelJS
+-Axios
+-Fractional
