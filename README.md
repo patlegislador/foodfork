@@ -10,7 +10,7 @@ Save recipes using a like feature.
 Vanilla Modular JS using MVC model. No frameworks used.
 
 ### Modules Imported
-Webpack
-BabelJS
-Axios
-Fractional
+*Webpack
+*BabelJS
+*Axios
+*Fractional
