@@ -14,3 +14,5 @@ Vanilla Modular JS using MVC model. No frameworks used.
 * BabelJS
 * Axios
 * Fractional
+* Uniqid
+* LocalStorage
