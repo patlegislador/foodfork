@@ -160,7 +160,7 @@ body {
   background-color: #F9F5F3;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-around; }
   .header__logo {
     margin-left: 4rem;
     height: 4.5rem;
@@ -172,6 +172,7 @@ body {
   display: flex;
   align-items: center;
   padding-left: 3rem;
+  margin-left: 29rem;
   transition: all .3s; }
   .search:focus-within {
     transform: translateY(-2px);
@@ -206,7 +207,7 @@ body {
     visibility: visible;
     opacity: 1; }
   .likes__icon {
-    fill: #F59A83;
+    fill: #7f7fd5;
     height: 3.75rem;
     width: 3.75rem; }
   .likes__panel {
@@ -442,7 +443,7 @@ body {
   .shopping__list {
     list-style: none;
     max-height: 77rem;
-    overflow: scroll; }
+    overflow: hidden; }
   .shopping__item {
     display: flex;
     align-items: flex-start;
@@ -451,7 +452,7 @@ body {
     position: relative; }
   .shopping__count {
     flex: 0 0 7.5rem;
-    padding: .4rem .5rem;
+    padding: .5rem .5rem;
     border: 1px solid #F2EFEE;
     border-radius: 3px;
     margin-right: 2rem;
@@ -464,7 +465,7 @@ body {
       font-size: 1.2rem;
       text-align: center;
       border: none;
-      width: 3.7rem;
+      width: 4.5rem;
       border-radius: 3px; }
       .shopping__count input:focus {
         outline: none;

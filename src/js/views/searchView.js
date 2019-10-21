@@ -10,13 +10,16 @@ export const clearResults = () => {
     el.searchResultPages.innerHTML = '';
 }
 
-export const highlightedSelected = id => {
-    document.querySelectorAll(`.results__link`).forEach(el => el.classList.remove('results__link--active'));
-    document.querySelector(`a[href="#${id}"]`).classList.add('results__link--active');
+export const highlightSelected = id => {
+    const resultsArr = Array.from(document.querySelectorAll('.results__link'));
+    resultsArr.forEach(el => {
+        el.classList.remove('results__link--active');
+    });
+    document.querySelector(`.results__link[href*="#${id}"]`).classList.add('results__link--active');
 }
 
 // Pasta With Tomato and Spinach
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
     if (title.length > limit) {
         let newTitle = title.split(' ').reduce((prev, next) => {
             return (prev + ' ' + next).length > 17 ? prev : prev + ' ' + next;
