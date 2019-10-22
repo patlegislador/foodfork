@@ -16,7 +16,6 @@ import { el, renderLoader, clearLoader } from './views/base'
 **/
 
 const state = {};
-window.state = state;
 
 // SEARCH CONTROLLER
 const controlSearch = async () => {
@@ -105,7 +104,6 @@ const controlRecipe = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
 
-
 const controlList = () => {
     // Create a new list if there is none yet
     if (!state.list) state.list = new List();
@@ -132,9 +130,6 @@ el.shoppingList.addEventListener('click', e => {
     }
 });
 
-// temporary testing
-state.likes = new Likes();
-likesView.toggleLikeMenu(state.likes.getNumLikes());
 
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
@@ -161,6 +156,21 @@ const controlLike = () => {
     likesView.toggleLikeMenu(state.likes.getNumLikes());
 
 }
+
+// Restore liked recipes on page load
+window.addEventListener('load', () => {
+    state.likes = new Likes();
+
+    // Restore likes
+    state.likes.readStorage();
+
+    // Toggle like menu button
+    likesView.toggleLikeMenu(state.likes.getNumLikes());
+
+    // Render liked recipes in menu
+    state.likes.likes.forEach(like => likesView.renderLike(like));
+});
+
 
 // Handling recipe button clicks 
 el.recipe.addEventListener('click', e => {
